@@ -1,0 +1,13 @@
+package com.company.AdapterPattern;
+
+public class Mp4Fis implements PlayerAdvanced{
+    @Override
+    public void playMP4(String NumeFisier) {
+
+    }
+
+    @Override
+    public void playSM(String NumeFisier) {
+        System.out.println("Se incarca fisier mp3. Nume:" + NumeFisier);
+    }
+}
