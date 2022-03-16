@@ -1,0 +1,24 @@
+package com.company.AdapterPattern;
+
+public class PlayerAdapter implements Player{
+   PlayerAdvanced playerAdvanced;
+
+
+    public PlayerAdapter(String audioType) {
+       if(audioType.equalsIgnoreCase("sm")){
+            playerAdvanced = new SMPlayer();
+       }
+       else if (audioType.equalsIgnoreCase("mp4")){
+           playerAdvanced = new Mp4Fis();
+       }
+    }
+    @Override
+public void play (String audioType, String NumeFisier){
+        if(audioType.equalsIgnoreCase("sm")) {
+            playerAdvanced.playSM(NumeFisier);
+        }
+        else if (audioType.equalsIgnoreCase("mp4")){
+            playerAdvanced.playMP4(NumeFisier);
+        }
+    }
+}
