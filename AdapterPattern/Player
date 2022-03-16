@@ -1,0 +1,8 @@
+package com.company.AdapterPattern;
+//combină capacitatea a două interfețe independente.
+//Acest model implică o singură clasă care este responsabilă să unească
+// funcționalitățile interfețelor independente sau incompatibile.
+public interface Player {
+    public void play(String audioType, String NumeFisier);
+
+}
