@@ -1,0 +1,18 @@
+package com.company.AdapterPattern;
+
+public class AudioPlayer implements Player {
+    @Override
+    public void play(String audioType, String NumeFisier) {
+        if (audioType.equalsIgnoreCase("mp3")){
+            System.out.println("Se incarca un fisier mp3. Nume:" + NumeFisier);
+        }
+        else if (audioType.equalsIgnoreCase("sm") || audioType.equalsIgnoreCase("mp4")){
+            PlayerAdapter playerAdapter;
+            playerAdapter = new PlayerAdapter(audioType);
+            playerAdapter.play(audioType, NumeFisier);
+        }
+        else{
+            System.out.println ("Fisier invalid" +audioType+"Acest format nu est esustinut de catre dispozitiv");
+        }
+    }
+}
