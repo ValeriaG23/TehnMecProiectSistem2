@@ -1,0 +1,6 @@
+package com.company.AdapterPattern;
+
+public interface PlayerAdvanced {
+    public void playMP4(String NumeFisier);
+    public void playSM(String NumeFisier);
+}
