@@ -1,0 +1,10 @@
+package com.company.AdapterPattern;
+
+public class AdapterPattern {
+    public static void main(String[] args){
+        Player audioPlayer = new AudioPlayer();
+        audioPlayer.play("mp3", "oceanyes.mp3");
+        audioPlayer.play("mp4", "HarryPotter.mp4");
+        audioPlayer.play("mv", "autres.mv");
+    }
+}
