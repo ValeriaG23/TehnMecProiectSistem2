@@ -1,0 +1,9 @@
+package com.company.Facade;
+
+public class Facade {
+    public static void main(String[] args){
+        ContUtilizator contUtilizator = new ContUtilizator(600);
+        KinogoInterface kinogo = new Kinogo(contUtilizator);
+        kinogo.checkIn(1);
+    }
+}
