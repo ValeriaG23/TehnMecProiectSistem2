@@ -1,0 +1,57 @@
+package com.company.Flyweight;
+
+import java.util.HashMap;
+
+public class FilmF {
+    private static final HashMap<String, Film> filmMap = new HashMap<>();
+
+    public static Film getROFilm(String language) {
+        String notice = language + "-RO";
+        Film film = filmMap.get(notice);
+        if (film != null) {
+            return film;
+        } else {
+            film = new ROFilm();
+            film.setLanguage(language);
+            filmMap.put(notice, film);
+        }
+        return film;
+    }
+    public static Film getRUFilm(String language){
+        String notice =  language +"-RU";
+        Film film = filmMap.get(notice);
+        if(film != null){
+            return film;}
+        else{
+            film = new RUFilm();
+            film.setLanguage(language);
+            filmMap.put(notice, film);
+        }
+
+        return film;
+    }
+    public static Film getFRFilm(String language){
+        String notice =  language +"-FR";
+        Film film = filmMap.get(notice);
+        if(film != null){
+            return film;}
+        else{
+            film = new FRFilm();
+            film.setLanguage(language);
+            filmMap.put(notice, film);
+        }
+        return film;
+    }
+    public static Film getENGFilm(String language){
+        String notice =  language +"-ENG";
+        Film film = filmMap.get(notice);
+        if(film != null){
+            return film;}
+        else{
+            film = new ENGFilm();
+            film.setLanguage(language);
+            filmMap.put(notice, film);
+        }
+        return film;
+    }
+}
