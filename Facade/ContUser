@@ -1,0 +1,18 @@
+package com.company.Facade;
+
+public class ContUtilizator {
+    private String idCont;
+    private int salvari;
+
+    public ContUtilizator(int salvari){
+        this.idCont="455";
+        this.salvari=salvari;
+    }
+    public String getIdCont(){
+        return idCont;
+    }
+    public int getSalvari(){
+        return salvari;
+    }
+
+}
