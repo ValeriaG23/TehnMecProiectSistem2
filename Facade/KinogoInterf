@@ -1,0 +1,8 @@
+package com.company.Facade;
+
+public abstract class KinogoInterface {
+    void checkIn(String numberMovies){
+
+    }
+    public abstract void checkIn(int numberMovies);
+}
