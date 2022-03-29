@@ -1,0 +1,16 @@
+
+public abstract class AppDecorator implements GooglePlay{
+    private GooglePlay newApp;
+    public AppDecorator(GooglePlay newApp){
+        this.newApp = newApp;
+    }
+    @Override
+    public String buyApplication(){
+        return newApp.buyApplication();
+    }
+
+    @Override
+    public double ApplicationPrice() {
+        return newApp.ApplicationPrice();
+    }
+}
