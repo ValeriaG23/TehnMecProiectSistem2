@@ -1,0 +1,9 @@
+package com.company.Bridge;
+
+public abstract class Filme {
+    VizioneazaFilm vizioneazaFilm;
+    public Filme(VizioneazaFilm vizioneazaFilm){
+        this.vizioneazaFilm = vizioneazaFilm;
+    }
+    abstract public void vizioneaza();
+}
