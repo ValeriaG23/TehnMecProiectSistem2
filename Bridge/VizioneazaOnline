@@ -1,0 +1,8 @@
+package com.company.Bridge;
+
+public class VizioneazaOnline implements VizioneazaFilm{
+    @Override
+    public void vizioneazaFilm() {
+        System.out.println ("VizioneazaOnline: Filmul este disponibil spre vizualizare");
+    }
+}
