@@ -1,0 +1,10 @@
+package com.company.Facade;
+import java.util.Arrays;
+import java.util.List;
+
+public class ValidareCont {
+    private List<String> validareCont= Arrays.asList("455", "600");
+    public boolean validare (String idCont){
+        return validareCont.contains(idCont);
+    }
+}
