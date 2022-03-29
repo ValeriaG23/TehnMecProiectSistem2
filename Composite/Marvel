@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+import java.util.List;
+public class Marvel implements Movie{
+   private List<Movie> movieList = new ArrayList<Movie>();
+    @Override
+    public void showMovieDetails() {
+        for (Movie movie:movieList){
+            movie.showMovieDetails();
+        }
+    }
+    public void addMovie(Movie movie){
+        movieList.add(movie);
+    }
+    public void removeMovie(Movie movie){
+        movieList.remove(movie);
+    }
+}
