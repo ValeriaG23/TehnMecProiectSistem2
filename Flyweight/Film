@@ -1,0 +1,6 @@
+package com.company.Flyweight;
+
+public interface Film {
+    void setLanguage(String language);
+    void modify(String content);
+}
