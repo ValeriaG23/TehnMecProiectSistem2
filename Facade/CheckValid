@@ -1,0 +1,9 @@
+package com.company.Facade;
+
+public class CheckValidare {
+    public int validate(int dateFilm, int nFilme){
+        if(dateFilm<nFilme) return 0;
+        else if(dateFilm-nFilme <35) return 1;
+        return 2;
+    }
+}
