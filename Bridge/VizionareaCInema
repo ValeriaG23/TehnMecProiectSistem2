@@ -1,0 +1,8 @@
+package com.company.Bridge;
+
+public class VizionareCinema implements VizioneazaFilm{
+    @Override
+    public void vizioneazaFilm() {
+        System.out.println("VizioneazaFim: Filmul incepe in cateva minute, ocupati-va locurile");
+    }
+}
