@@ -1,0 +1,14 @@
+package com.company.Bridge;
+import org.junit.Test;
+public class Bridge {
+    @Test
+    public void bridge(){
+        VizioneazaFilm onlineVizioneaza = new VizioneazaOnline();
+        Filme vizioneazaOnline = new Online(onlineVizioneaza);
+        vizioneazaOnline.vizioneaza();
+
+        VizioneazaFilm cinemaVizioneaza = new VizionareCinema();
+        Filme vizioneazaCinema = new Cinema(cinemaVizioneaza);
+        vizioneazaCinema.vizioneaza();
+    }
+}
