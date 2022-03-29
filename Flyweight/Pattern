@@ -1,0 +1,23 @@
+package com.company.Flyweight;
+
+public class Pattern {
+    public static void main (String[] args)
+    {
+        Film lg = FilmF.getROFilm("RO");
+        lg.modify("Film Roman");
+        System.out.println(lg.hashCode());
+
+        Film lg1 = FilmF.getRUFilm("RU");
+        lg1.modify("Film Rus");
+        System.out.println(lg.hashCode());
+
+        Film lg2 = FilmF.getFRFilm("FR");
+        lg2.modify("Film Francez");
+        System.out.println(lg.hashCode());
+
+        Film lg3 = FilmF.getENGFilm("ENG");
+        lg3.modify("Film Englez");
+        System.out.println(lg.hashCode());
+
+    }
+}
