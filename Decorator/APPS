@@ -1,0 +1,12 @@
+
+public class Apps implements GooglePlay{
+    @Override
+    public String buyApplication() {
+        return "Applications";
+    }
+
+    @Override
+    public double ApplicationPrice() {
+        return 25.0;
+    }
+}
