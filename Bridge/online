@@ -1,0 +1,11 @@
+package com.company.Bridge;
+
+public class Cinema extends Filme{
+    public Cinema (VizioneazaFilm vizioneazaFilm){
+        super (vizioneazaFilm);
+    }
+    @Override
+    public void vizioneaza() {
+        vizioneazaFilm.vizioneazaFilm();
+    }
+}
