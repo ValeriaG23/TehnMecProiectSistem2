@@ -1,0 +1,35 @@
+package com.company.Facade;
+
+public class Kinogo extends KinogoInterface{
+  private ContUtilizator contUtilizator;
+  public Kinogo (ContUtilizator contUtilizator){
+      this.contUtilizator=contUtilizator;
+  }
+
+    @Override
+    public void checkIn(int numberMovies) {
+        ValidareCont validareCont = new ValidareCont();
+        boolean isContulExista = validareCont.validare(contUtilizator.getIdCont());
+
+        if(isContulExista){
+            CheckValidare checkValidare = new CheckValidare();
+            int type = checkValidare.validate(contUtilizator.getSalvari(),numberMovies);
+            switch (type)
+            {
+                case 0:
+                    System.out.println(String.format("Reincarca contul", numberMovies));
+                    break;
+                case 1:
+                    System.out.println(String.format("Modifica datele in 3 zile"));
+                    break;
+                case 2:
+                    System.out.println(String.format("Accesat cu succes"));
+                    break;
+                default: break;
+            }
+        }
+        else {
+            System.out.println("Cont inexistent");
+        }
+    }
+}
