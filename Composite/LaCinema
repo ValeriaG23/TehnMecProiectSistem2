@@ -1,0 +1,24 @@
+package com.company.Composite;
+
+public class VizionezLaCinema implements Movie{
+        private String title;
+        private String gen;
+        private long durata;
+        private long an;
+
+        public static final String EOL_STRING=
+                System.getProperty("line.separator");
+        public static final String SPACE ="";
+
+        public VizionezLaCinema(String title, String gen, long durata, long an){
+            this.title=title;
+            this.gen=gen;
+            this.durata=durata;
+            this.an =an;
+        }
+
+    @Override
+    public void showMovieDetails() {
+        System.out.println(title+""+ SPACE+ EOL_STRING + gen +SPACE+ EOL_STRING+durata+SPACE+ EOL_STRING+ an+SPACE+EOL_STRING);
+    }
+}
