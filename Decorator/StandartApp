@@ -1,0 +1,17 @@
+package com.company.DecoratorProb2;
+
+public class StardartApp extends AppDecorator{
+    public StardartApp(GooglePlay newApp) {
+        super(newApp);
+    }
+
+    @Override
+    public String buyApplication() {
+        return super.buyApplication() +" profita de filtre gratuit";
+    }
+
+    @Override
+    public double ApplicationPrice() {
+        return super.ApplicationPrice() +0.0;
+    }
+}
