@@ -1,0 +1,39 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class DecoratorTest {
+    public static void main (String [] args) throws NumberFormatException, IOException{
+        int alegere;
+        do{
+            System.out.print("Google Play \n");
+            System.out.print("Standart App \n");
+            System.out.print("Premium App \n");
+            System.out.print("Exit \n");
+            BufferedReader br = new BufferedReader( new InputStreamReader(System.in));
+            alegere = Integer.parseInt(br.readLine());
+            switch(alegere){
+                case 1 -> {
+                    Apps app1 = new Apps();
+                    System.out.println(app1.buyApplication());
+                    System.out.println(app1.ApplicationPrice());
+                }
+                case 2 -> {
+                    GooglePlay app2 = new StardartApp(new Apps());
+                    System.out.println(app2.buyApplication());
+                    System.out.println(app2.ApplicationPrice());
+                }
+                case 3 -> {
+                    GooglePlay app3 = new PremiumApp(new Apps());
+                    System.out.println(app3.buyApplication());
+                    System.out.println(app3.ApplicationPrice());
+                }
+                default ->{
+                    System.out.println("Alte alegeri sunt indisponibile momentan");
+                }
+
+            }
+        }
+        while(true);
+    }
+}
