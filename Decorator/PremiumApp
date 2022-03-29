@@ -1,0 +1,15 @@
+package com.company.DecoratorProb2;
+
+public class PremiumApp extends AppDecorator{
+    public PremiumApp(GooglePlay newApp) {
+        super(newApp);
+    }
+    public String buyApplication() {
+        return super.buyApplication() +" cele mai bune filtre la un pret avantajos";
+    }
+
+    @Override
+    public double ApplicationPrice() {
+        return super.ApplicationPrice() +28.99;
+    }
+}
