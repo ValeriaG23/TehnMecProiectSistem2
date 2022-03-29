@@ -1,0 +1,16 @@
+package com.company.Flyweight;
+
+public class RUFilm implements Film{
+
+   final Language lg=Language.RU;
+   private String language = null;
+    @Override
+    public void setLanguage(String language) {
+        this.language=language;
+    }
+
+    @Override
+    public void modify(String content) {
+        System.out.println("Alegeti limba dorita:"+ language);
+    }
+}
