@@ -1,0 +1,6 @@
+package com.company.DecoratorProb2;
+
+public interface GooglePlay {
+    String buyApplication();
+    double ApplicationPrice();
+}
